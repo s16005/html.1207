@@ -5,6 +5,7 @@ html {
 h1 {
 	/*font-size: 2em;*/
 	font-size: 2rem;
+	text-shadow: 2px 2px 0 rgba(0, 0, 0, .4);
 }
 
 span {
@@ -14,24 +15,108 @@ span {
 
 div{
 	/*width: 100px;
-	height: 50px;*/
+	height: 50px;
 	width: 200px;
 	height: 200px;
 	background: skyblue;
-	/*border-radius: 30px/ 15px;*/
-	/*border-bottom-right-radius: 30px;*/
-	/*border-radius: 10px 20px 30px;*/
+	border-radius: 30px/ 15px;
+	border-bottom-right-radius: 30px;
+	border-radius: 10px 20px 30px;
 	border-radius: 50%;
 	background: url(os.png);
+	width: 200px;
+	height: 200px;
+	background-image: linear-gradient(45deg,skyblue, blue)
+	background-image: linear-gradient(lightgreen, skyblue, blue)
+	background-image: linear-gradient(lightgreen 10%, skyblue 70%, blue)
+	background-image: repeating-linear-gradient(lightgreen, skyblue 20px)*/
+	width: 100px;
+	height: 50px;
+	/*background-image: radial-gradient(skyblue,blue);*/
+	/*background-image: radial-gradient(at 30px 40px, skyblue,blue);*/
+	/*background-image: radial-gradient(ellipse 20px 30px at 30px 40px, skyblue,blue);*/
+	/*background-image: radial-gradient(circle 20px at 30px 40px, skyblue,blue);*/
+	/*background-image: radial-gradient(farthest-side at 30px 40px, skyblue,blue);*/
+	/*background-image: repeating-radial-gradient(skyblue,blue 20px);*/
+	/*background: #fff;
+	box-shadow: 10px 20px 4px 10px rgba(0, 0, 0, .4) inset,
+	10px 20px 4px 10px skyblue;*/
+}
 
+div#Lesson17:hover {
+	width: 200px;
+	height: 50px;
+	background: blue;
+}
+
+body {
+	background: #eee;
+}
+
+#Lesson18{
+	width:50px;
+	height: 50px;
+	background: skyblue;
+
+	-webkit-animation-name: slidein;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-delay: 0.1s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction:alternate;
+ }
+	@-webkit-keyframes slidein {
+		0%{
+			margin-left: 100%;
+			background: white;
+		}
+		70%{
+			margin-left: 50%;
+			background: blue;
+		}
+		100%{
+			margin-left: 0%;
+		}
+	}
+}
+
+#Lesson17{
+	width: 100px;
+	height: 50px;
+	background: skyblue;
+	/*transition-property:all; 
+	transition-duration: 2s;
+	transition-timing-function:ease; 
+	transition-delay: 0.8s;*/
+	transition: all 2s ease 0.8s;
+}
+#Lesson15{
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+	position: absolute;
+	top: 100px;
+	left: 100px;
 }
 
 #box1 {
-	background: rgb(255, 100, 100);
+	/*background: rgb(255, 100, 100);*/
+	background: skyblue;
+	opacity: .5;
 }
 
 #box2 {
-	background: rgba(255, 100, 100, 0.2);
+	/*background: rgba(255, 100, 100, 0.2);*/
+	background: orange;
+	opacity: .5;
+	/*transform: translate(20px, 40px);*/
+	/*transform: translateX(20px);*/
+	/*transform: scale(0.5, 1.5);	*/
+	/*transform: skew(10deg, 20deg);	*/
+	transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	transform-origin: 0 0;
+
 }
 
 #box3 {
@@ -92,16 +177,47 @@ input[type="checkbox"]:checked + label
 }
 
 header {
-	width: 100%;
+	/*width: 100%;
 	height: 130px;
 	background: url(os.png) no-repeat skyblue;
-	/*background-size: 50%;*/
-	/*background-size: 50% 100%*/
-	/*background-size: cover;*/
+	background-size: 50%;
+	background-size: 50% 100%
+	background-size: cover;
 	background-size: contain;
-	background-position: 50% 50%;
-
-
-
+	background-position: 50% 50%;*/
+	width: 100%;
+	height: 200px;
+	background:
+	url(os.png) no-repeat 0 0,
+	url('bright.gif') no-repeat 30px 30px,
+	url('back-flower.gif') no-repeat bottom right;
 }
 
+#Lesson19{
+	margin: 0;
+	padding: 0;
+	background: white;
+}
+
+.container {
+	width: 320px;
+	height: 100px;
+	background: skyblue;
+}
+
+.box {
+	box-sizing: border-box;
+	width: 100px;
+	height:100px;
+	/*width: 80px;
+	height: 70px;*/
+	background: #eee;
+	float: left;
+
+	padding: 10px;
+	border-bottom: 10px solid #ccc;
+}
+
+.box + .box {
+	margin-left: 10px;
+}
